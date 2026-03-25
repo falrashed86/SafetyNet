@@ -1,3 +1,4 @@
+import sys
 import time
 from pathlib import Path
 
@@ -5,6 +6,11 @@ import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
 from streamlit_autorefresh import st_autorefresh
+
+# Add project root to Python path
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.append(str(ROOT_DIR))
 
 from database.db import init_db, get_counts, get_recent_high
 
