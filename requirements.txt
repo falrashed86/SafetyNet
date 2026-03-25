@@ -1,0 +1,6 @@
+streamlit
+streamlit-autorefresh
+pillow
+transformers
+torch
+sentencepiece
